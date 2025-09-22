@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neural Network Digit Recognition</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Neural Network Digit Recognition</h1>
+            <p>Draw a digit (0-9) in the canvas below and see the AI prediction!</p>
+        </header>
+        
+        <div class="main-content">
+            <div class="canvas-section">
+                <div class="canvas-container">
+                    <canvas id="drawCanvas" width="280" height="280"></canvas>
+                    <div class="canvas-controls">
+                        <button id="clearBtn" class="btn">Clear</button>
+                        <button id="predictBtn" class="btn primary">Predict</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="results-section">
+                <div class="prediction-card">
+                    <h3>Prediction</h3>
+                    <div id="predictionResult" class="prediction-display">
+                        <div class="digit-large">?</div>
+                        <div class="confidence">Draw a digit to see prediction</div>
+                    </div>
+                </div>
+                
+                <div class="confidence-card">
+                    <h3>Confidence Scores</h3>
+                    <div id="confidenceBars" class="confidence-bars">
+                        <div class="no-data">No prediction yet</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="info-section">
+            <div class="info-card">
+                <h3>How it works</h3>
+                <p>This neural network was built from scratch using only Python and NumPy. It was trained on the MNIST dataset to recognize handwritten digits.</p>
+            </div>
+            
+            <div class="info-card">
+                <h3>Instructions</h3>
+                <ul>
+                    <li>Draw a digit (0-9) in the canvas</li>
+                    <li>Click "Predict" to see the AI's guess</li>
+                    <li>Use "Clear" to start over</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
